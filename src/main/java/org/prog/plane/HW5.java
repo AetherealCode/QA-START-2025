@@ -9,6 +9,7 @@ public class HW5 {
     public static void main(String[] args) {
         Plane[] planes = new Plane[50];
         Random rand = new Random();
+int countSum = 0;
 
         
         for (int i = 0; i < planes.length; i++) {
@@ -22,8 +23,10 @@ public class HW5 {
             counter = 0;
             if (planes[i].currentPassengersCount <= planes[i].maxPassengersCount/2) {
                 counter++;
+                countSum++;
 
             }
+           // System.out.println(counter);
             int perc = (planes[i].currentPassengersCount*100)/planes[i].maxPassengersCount;
             System.out.println("Номер рейса: UU" + planes[i].flightID);
             System.out.println("Максимальное число мест:" + planes[i].maxPassengersCount);
@@ -38,9 +41,7 @@ public class HW5 {
                 System.out.println("__________________________________________");
 
                             }
-
-
-
         }
+        System.out.println("Количество самолетов, где занятых мест меньше, чем половина вместимости: " + countSum);
 }
 }

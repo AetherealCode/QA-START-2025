@@ -5,6 +5,7 @@ public class Plane {
         public int currentPassengersCount;
         public int maxPassengersCount;
         public int flightID;
+        public int counter;
 
 
 
